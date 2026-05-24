@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wireless Pong Controller — Natalie McDonald</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">NM<span class="nav-logo-dot">.</span></a>
+      <nav class="nav-links">
+        <a href="../index.html#projects">← All projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="proj-page">
+
+    <div class="proj-page-hero">
+      <div class="proj-page-inner">
+        <div class="proj-page-meta">
+          <span class="badge badge-cat">Mechatronics</span>
+          <span class="proj-date">ME 3704 · Intro to Mechatronics</span>
+        </div>
+        <h1 class="proj-page-title">Wireless Pong Controller</h1>
+        <p class="proj-page-sub">A motion-controlled wireless game controller built with an Arduino R4 and IMU sensor — tilt the controller to move your Pong paddle, feel the haptic feedback on every hit.</p>
+        <div class="proj-tags" style="margin-top:1.5rem">
+          <span class="tag">Arduino R4</span>
+          <span class="tag">IMU</span>
+          <span class="tag">TCP networking</span>
+          <span class="tag">Python</span>
+          <span class="tag">Haptic feedback</span>
+          <span class="tag">Embedded systems</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-page-inner proj-page-body">
+
+      <!-- Overview -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">The idea</h2>
+        <p>For the final project in ME 3704 (Introduction to Mechatronics), I built a wireless game controller that lets users physically interact with a Python Pong game using motion. The project was inspired by the Wii remote — hence the name — and pushed me to integrate hardware, wireless communication, and software into one working system.</p>
+        <p>As the user tilts the controller forward and backward, the IMU reads Y-axis acceleration and streams it over a TCP connection to a Python script on the laptop, which maps the acceleration value to the player's paddle position in real time. Vibration motors in the controller fire on paddle contact for haptic feedback.</p>
+      </section>
+
+      <!-- How it works -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">How it works</h2>
+        <div class="contrib-grid">
+          <div class="contrib-card">
+            <div class="contrib-title">Motion sensing</div>
+            <p>An Inertial Measurement Unit (IMU) on the Arduino R4 continuously reads Y-axis acceleration as the controller tilts. Values are filtered and normalized before transmission.</p>
+          </div>
+          <div class="contrib-card">
+            <div class="contrib-title">Wireless transmission</div>
+            <p>The Arduino sends acceleration data over a TCP (Transmission Control Protocol) connection to the laptop. TCP was chosen for its reliability — no dropped packets means no missed paddle moves.</p>
+          </div>
+          <div class="contrib-card">
+            <div class="contrib-title">Game control</div>
+            <p>A Python script receives the TCP stream and maps the acceleration value to the Pong paddle's Y position. The mapping is tuned so small tilts give precise control while large tilts give fast movement.</p>
+          </div>
+          <div class="contrib-card">
+            <div class="contrib-title">Haptic feedback</div>
+            <p>Vibration motors in the controller fire a short pulse whenever the paddle hits the ball, closing the feedback loop between the physical controller and the on-screen game.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">Demo video</h2>
+        <p>Replace the YouTube link below with your actual video URL after uploading.</p>
+        <div class="video-embed">
+          <!-- Replace YOUR_YOUTUBE_VIDEO_ID with the ID from your YouTube URL -->
+          <!-- e.g. if your URL is youtube.com/watch?v=abc123, use abc123 -->
+          <iframe
+            src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID"
+            title="Wii Pong Controller Demo"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </section>
+
+      <!-- Photos -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">Photos</h2>
+        <div class="photo-grid">
+          <div class="photo-placeholder"><span>images/wii-controller-1.jpg</span></div>
+          <div class="photo-placeholder"><span>images/wii-controller-2.jpg</span></div>
+          <div class="photo-placeholder"><span>images/wii-controller-3.jpg</span></div>
+        </div>
+        <!-- AFTER uploading photos:
+        <div class="photo-grid">
+          <img src="../images/wii-controller-1.jpg" alt="Controller hardware" />
+          <img src="../images/wii-controller-2.jpg" alt="Arduino R4 and IMU wiring" />
+          <img src="../images/wii-controller-3.jpg" alt="Playing Pong with the controller" />
+        </div>
+        -->
+      </section>
+
+      <!-- Slides -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">Presentation slides</h2>
+        <div class="pdf-viewer">
+          <iframe src="../images/wii-slides.pdf" title="Wii Controller Slides"></iframe>
+        </div>
+        <a href="../images/wii-slides.pdf" class="btn btn-ghost" download style="margin-top:1rem;display:inline-flex">Download slides ↓</a>
+      </section>
+
+      <!-- Components -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">Components</h2>
+        <div class="parts-list">
+          <div class="part-row"><span class="part-name">Arduino R4 WiFi</span><span class="part-desc">Microcontroller with onboard WiFi for TCP communication</span></div>
+          <div class="part-row"><span class="part-name">IMU sensor</span><span class="part-desc">6-DOF inertial measurement unit for motion sensing</span></div>
+          <div class="part-row"><span class="part-name">Vibration motors</span><span class="part-desc">Haptic feedback on paddle contact</span></div>
+          <div class="part-row"><span class="part-name">Portable power pack</span><span class="part-desc">Untethered operation during gameplay</span></div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="../index.html#projects" class="btn btn-ghost">← Back to all projects</a>
+      <span class="footer-mono">nmcdonald33@vt.edu</span>
+    </div>
+  </footer>
+
+</body>
+</html>

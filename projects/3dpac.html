@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3DPAC — Natalie McDonald</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">NM<span class="nav-logo-dot">.</span></a>
+      <nav class="nav-links">
+        <a href="../index.html#projects">← All projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="proj-page">
+
+    <div class="proj-page-hero">
+      <div class="proj-page-inner">
+        <div class="proj-page-meta">
+          <span class="badge badge-win">🏆 1st place · Innovation award</span>
+          <span class="badge badge-cat">Manufacturing</span>
+          <span class="proj-date">Feb 2025 – Present</span>
+        </div>
+        <h1 class="proj-page-title">3D Printed Aircraft Competition</h1>
+        <p class="proj-page-sub">Leading fabrication for Virginia Tech's entry in the annual University of Texas Arlington 3DPAC competition — designing, printing, and flight-testing fully 3D-printed aircraft.</p>
+        <div class="proj-tags" style="margin-top:1.5rem">
+          <span class="tag">SolidWorks</span>
+          <span class="tag">LW-PLA</span>
+          <span class="tag">CFD</span>
+          <span class="tag">FEA</span>
+          <span class="tag">Flight testing</span>
+          <span class="tag">Additive manufacturing</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-page-inner proj-page-body">
+
+      <!-- Role highlight -->
+      <div class="callout">
+        <div class="callout-label">Leadership role · Starting June 2026</div>
+        <p>I'm taking on the Finance Lead position for 3DPAC, managing team expenses, establishing a budget, and securing funding through sponsorships and external partnerships. I'm also coordinating outreach events to showcase the team's work and overseeing the team's Instagram presence.</p>
+      </div>
+
+      <!-- Overview -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">What we built</h2>
+        <p>3DPAC is Virginia Tech's entry in the annual 3D Printed Aircraft Competition hosted by the University of Texas Arlington. Every component of the aircraft — from the fuselage to the wing spars — must be 3D printed. I joined as a member of the print sub-team and quickly took on a lead fabrication role, overseeing manufacturing for all competition aircraft.</p>
+        <p>This year we designed and flew the <strong>Vortex</strong>, our most refined airframe to date. The design went through four full flight test cycles before competition, each one informing changes to geometry, print parameters, and assembly methods.</p>
+      </section>
+
+      <!-- Photo gallery -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">Photos</h2>
+        <div class="photo-grid">
+          <!-- Replace these src paths with your actual image filenames in /images/ -->
+          <div class="photo-placeholder">
+            <span>Upload photo → images/3dpac-1.jpg<br>then replace src here</span>
+          </div>
+          <div class="photo-placeholder">
+            <span>images/3dpac-2.jpg</span>
+          </div>
+          <div class="photo-placeholder">
+            <span>images/3dpac-3.jpg</span>
+          </div>
+          <div class="photo-placeholder">
+            <span>images/3dpac-4.jpg</span>
+          </div>
+        </div>
+        <!-- AFTER uploading photos, replace the divs above with:
+        <div class="photo-grid">
+          <img src="../images/3dpac-1.jpg" alt="Vortex airframe on print bed" />
+          <img src="../images/3dpac-2.jpg" alt="Flight test at competition" />
+          <img src="../images/3dpac-3.jpg" alt="Team with finished aircraft" />
+          <img src="../images/3dpac-4.jpg" alt="Close-up of wing assembly" />
+        </div>
+        -->
+      </section>
+
+      <!-- My contributions -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">My contributions</h2>
+        <div class="contrib-grid">
+          <div class="contrib-card">
+            <div class="contrib-title">Fabrication lead</div>
+            <p>Managed the print queue and assembly process for all competition aircraft. Set print parameters, handled failure troubleshooting, and maintained structural integrity targets across multiple airframe iterations.</p>
+          </div>
+          <div class="contrib-card">
+            <div class="contrib-title">CAD & geometry optimization</div>
+            <p>Translated design criteria into print-ready CAD models in SolidWorks. Refined geometries for additive manufacturing — minimizing supports, optimizing wall thickness, and reducing weight without sacrificing structural integrity.</p>
+          </div>
+          <div class="contrib-card">
+            <div class="contrib-title">Flight testing</div>
+            <p>Supported four iterative flight test cycles, logging performance data and feeding observations back into design decisions. Evaluated manufacturability and structural reliability under real flight loads.</p>
+          </div>
+          <div class="contrib-card">
+            <div class="contrib-title">Material selection</div>
+            <p>Selected LW-PLA (lightweight PLA) as the primary filament for its exceptional strength-to-weight ratio in airframe applications. Characterized print behavior at various temperatures and speeds to hit target densities.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Competition report -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">Competition report — Vortex 2025–2026</h2>
+        <p>Full technical report covering design decisions, manufacturing process, flight test results, and competition outcomes.</p>
+        <!-- Replace YOUR-REPORT-FILENAME.pdf with your actual file name -->
+        <div class="pdf-viewer">
+          <iframe src="../images/3dpac-report.pdf" title="3DPAC Competition Report"></iframe>
+        </div>
+        <a href="../images/3dpac-report.pdf" class="btn btn-ghost" download style="margin-top:1rem;display:inline-flex">Download report ↓</a>
+        <!-- AFTER uploading: make sure the filename matches what you uploaded to /images/ -->
+      </section>
+
+      <!-- Result -->
+      <div class="callout callout-win">
+        <div class="callout-label">Result</div>
+        <p>Virginia Tech's 3DPAC team won <strong>1st place for Innovation</strong> at the 2025 annual competition at the University of Texas Arlington.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="../index.html#projects" class="btn btn-ghost">← Back to all projects</a>
+      <span class="footer-mono">nmcdonald33@vt.edu</span>
+    </div>
+  </footer>
+
+</body>
+</html>

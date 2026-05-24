@@ -1,0 +1,252 @@
+/* ─── Project page shared styles ─── */
+
+.proj-page { padding-bottom: 4rem; }
+
+.proj-page-hero {
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--border);
+  padding: 4rem 2rem 3rem;
+}
+
+.proj-page-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.proj-page-body {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.proj-page-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.proj-date {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+.proj-page-title {
+  font-family: var(--font-serif);
+  font-size: clamp(30px, 5vw, 48px);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.proj-page-sub {
+  font-size: 17px;
+  color: var(--ink-2);
+  line-height: 1.7;
+  font-weight: 300;
+  max-width: 600px;
+}
+
+/* ─── Sections ─── */
+.proj-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.proj-section p {
+  font-size: 15px;
+  color: var(--ink-2);
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+.proj-section p strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.proj-section-title {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ─── Callout ─── */
+.callout {
+  background: var(--accent-light);
+  border: 1px solid rgba(42,95,79,0.2);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+}
+
+.callout-win {
+  background: var(--win-bg);
+  border-color: rgba(26,92,42,0.25);
+}
+
+.callout-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.callout-win .callout-label { color: var(--win); }
+
+.callout p {
+  font-size: 15px;
+  color: var(--ink-2);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+.callout p strong { color: var(--ink); font-weight: 500; }
+
+/* ─── Contribution cards ─── */
+.contrib-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.contrib-card {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+}
+
+.contrib-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.contrib-card p {
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+/* ─── Photo grid ─── */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  display: block;
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 200px;
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border);
+  background: var(--paper-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.photo-placeholder span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-4);
+  line-height: 1.6;
+}
+
+/* ─── PDF viewer ─── */
+.pdf-viewer {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--paper-2);
+}
+
+.pdf-viewer iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  display: block;
+}
+
+/* ─── Video embed ─── */
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--ink);
+}
+
+.video-embed iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ─── Parts list ─── */
+.parts-list {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.part-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.part-row:last-child { border-bottom: none; }
+
+.part-name {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+
+.part-desc {
+  font-size: 13px;
+  color: var(--ink-3);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 600px) {
+  .proj-page-hero { padding: 2.5rem 1.5rem 2rem; }
+  .proj-page-body { padding: 2rem 1.5rem; }
+  .pdf-viewer iframe { height: 400px; }
+  .photo-grid { grid-template-columns: 1fr 1fr; }
+}

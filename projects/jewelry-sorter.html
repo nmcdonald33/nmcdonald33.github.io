@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Automated Jewelry Sorter — Natalie McDonald</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">NM<span class="nav-logo-dot">.</span></a>
+      <nav class="nav-links">
+        <a href="../index.html#projects">← All projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="proj-page">
+
+    <div class="proj-page-hero">
+      <div class="proj-page-inner">
+        <div class="proj-page-meta">
+          <span class="badge badge-cat">Mechatronics</span>
+          <span class="proj-date">ME 3024 · Engineering Design and Economics</span>
+        </div>
+        <h1 class="proj-page-title">Automated Jewelry Sorter</h1>
+        <p class="proj-page-sub">A Raspberry Pi-powered gantry system that uses computer vision to detect and sort jewelry by size — designed to solve the age-old problem of untangling your necklaces at 11pm.</p>
+        <div class="proj-tags" style="margin-top:1.5rem">
+          <span class="tag">Raspberry Pi</span>
+          <span class="tag">Python</span>
+          <span class="tag">Computer vision</span>
+          <span class="tag">Gantry control</span>
+          <span class="tag">Mechanical design</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-page-inner proj-page-body">
+
+      <!-- Overview -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">The problem</h2>
+        <p>For ME 3024 (Engineering Design and Economics), our team identified a real pain point: busy college students and working women who love jewelry but hate the nightly ritual of removing, sorting, and storing it. The solution: an automated system that does it for you.</p>
+        <p>The system uses a Raspberry Pi and a camera to identify each piece of jewelry based on its size using image processing, then commands a gantry to pick it up and move it to an assigned storage compartment. The result is a semi-functional prototype that demonstrates the core detection-and-sort pipeline end to end.</p>
+      </section>
+
+      <!-- System breakdown -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">System breakdown</h2>
+        <div class="contrib-grid">
+          <div class="contrib-card">
+            <div class="contrib-title">Vision system</div>
+            <p>A camera feeds live frames to a Python image processing script running on the Raspberry Pi. The script detects the bounding box of each jewelry piece and classifies it by size into one of several categories (ring, bracelet, necklace).</p>
+          </div>
+          <div class="contrib-card">
+            <div class="contrib-title">Gantry control</div>
+            <p>Based on the detected size category, the Raspberry Pi commands stepper motors to move the gantry to the correct X-Y position above the assigned storage compartment, then actuates a drop mechanism.</p>
+          </div>
+          <div class="contrib-card">
+            <div class="contrib-title">Mechanical design</div>
+            <p>The gantry frame was designed for low cost and ease of fabrication. Rails and carriages were specified for smooth motion with minimal backlash, keeping sorting precision within the compartment boundaries.</p>
+          </div>
+          <div class="contrib-card">
+            <div class="contrib-title">Software pipeline</div>
+            <p>The full pipeline — capture → process → classify → command → actuate — runs in a continuous loop. Error handling accounts for misdetections and mechanical overruns.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Photos -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">Photos</h2>
+        <div class="photo-grid">
+          <div class="photo-placeholder"><span>images/jewelry-1.jpg</span></div>
+          <div class="photo-placeholder"><span>images/jewelry-2.jpg</span></div>
+          <div class="photo-placeholder"><span>images/jewelry-3.jpg</span></div>
+          <div class="photo-placeholder"><span>images/jewelry-4.jpg</span></div>
+        </div>
+        <!-- AFTER uploading photos:
+        <div class="photo-grid">
+          <img src="../images/jewelry-1.jpg" alt="Full gantry assembly" />
+          <img src="../images/jewelry-2.jpg" alt="Raspberry Pi and camera setup" />
+          <img src="../images/jewelry-3.jpg" alt="Jewelry detection in action" />
+          <img src="../images/jewelry-4.jpg" alt="Storage compartments" />
+        </div>
+        -->
+      </section>
+
+      <!-- Report -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">Design report</h2>
+        <div class="pdf-viewer">
+          <iframe src="../images/jewelry-report.pdf" title="Jewelry Sorter Design Report"></iframe>
+        </div>
+        <a href="../images/jewelry-report.pdf" class="btn btn-ghost" download style="margin-top:1rem;display:inline-flex">Download report ↓</a>
+      </section>
+
+      <!-- Slides -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">Presentation slides</h2>
+        <div class="pdf-viewer">
+          <iframe src="../images/jewelry-slides.pdf" title="Jewelry Sorter Slides"></iframe>
+        </div>
+        <a href="../images/jewelry-slides.pdf" class="btn btn-ghost" download style="margin-top:1rem;display:inline-flex">Download slides ↓</a>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="../index.html#projects" class="btn btn-ghost">← Back to all projects</a>
+      <span class="footer-mono">nmcdonald33@vt.edu</span>
+    </div>
+  </footer>
+
+</body>
+</html>

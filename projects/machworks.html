@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Machworks Design Team — Natalie McDonald</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">NM<span class="nav-logo-dot">.</span></a>
+      <nav class="nav-links">
+        <a href="../index.html#projects">← All projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="proj-page">
+
+    <div class="proj-page-hero">
+      <div class="proj-page-inner">
+        <div class="proj-page-meta">
+          <span class="badge badge-cat">Simulation</span>
+          <span class="badge badge-cat">CAD</span>
+          <span class="proj-date">Jun 2024 – Nov 2025</span>
+        </div>
+        <h1 class="proj-page-title">Machworks Design Team</h1>
+        <p class="proj-page-sub">Virginia Tech's undergraduate team working to design and build the first student-built autonomous turbojet capable of reaching supersonic speeds. I contributed to propulsion modeling and afterburner design.</p>
+        <div class="proj-tags" style="margin-top:1.5rem">
+          <span class="tag">MATLAB</span>
+          <span class="tag">Simulink</span>
+          <span class="tag">System ID</span>
+          <span class="tag">Python</span>
+          <span class="tag">Raspberry Pi</span>
+          <span class="tag">Autodesk Fusion</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-page-inner proj-page-body">
+
+      <!-- Overview -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">About Machworks</h2>
+        <p>Machworks is an interdisciplinary undergraduate design team at Virginia Tech with an ambitious goal: become the first undergraduate group to design and build an autonomous turbojet capable of reaching supersonic speeds. I was a member of the propulsion sub-team, working on two parallel efforts — engine modeling and afterburner design.</p>
+        <a href="https://machworks.org" target="_blank" rel="noopener" class="btn btn-ghost" style="display:inline-flex;margin-top:0.75rem">Visit team site ↗</a>
+      </section>
+
+      <!-- Engine model -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">Turbojet engine model</h2>
+        <p>My primary contribution was developing a dynamic model of the jet engine using MATLAB, Simulink, and System Identification. The goal was to characterize the relationship between throttle control position and thrust output — a model the team could use for control system development and flight simulation.</p>
+        <p>The data collection process started from scratch: I used a rotary encoder and Raspberry Pi to record the position of a servo as it moved in response to input commands, logging everything to a CSV file. That data became the basis for the System ID model in Simulink.</p>
+        <div class="contrib-grid" style="margin-top:1.5rem">
+          <div class="contrib-card">
+            <div class="contrib-title">Data collection</div>
+            <p>Python script on Raspberry Pi reads a rotary encoder and logs servo position + timestamp to CSV at high frequency. Designed to capture both step and sweep inputs.</p>
+          </div>
+          <div class="contrib-card">
+            <div class="contrib-title">System ID</div>
+            <p>Used MATLAB's System Identification Toolbox to fit a transfer function model to the collected servo position data. Validated the model against held-out test data.</p>
+          </div>
+          <div class="contrib-card">
+            <div class="contrib-title">Simulink model</div>
+            <p>Built a Simulink block diagram representing the throttle-to-thrust relationship, ready for integration with the team's flight dynamics and control systems work.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Code -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">Code</h2>
+        <p>The encoder logging script and Simulink model files are available below. Upload your code files to the images folder or link to a GitHub repo.</p>
+        <!-- Option A: Link to GitHub repo -->
+        <!-- <a href="https://github.com/yourusername/machworks-engine-model" target="_blank" rel="noopener" class="btn btn-ghost" style="display:inline-flex">View on GitHub ↗</a> -->
+
+        <!-- Option B: Download link for a zip -->
+        <!-- <a href="../images/machworks-code.zip" class="btn btn-ghost" download style="display:inline-flex">Download code ↓</a> -->
+
+        <div class="callout" style="margin-top:1rem">
+          <div class="callout-label">To add your code</div>
+          <p>Either link to a GitHub repo (recommended — uncomment Option A above and add your URL) or upload a .zip of the code files to /images/ and uncomment Option B.</p>
+        </div>
+      </section>
+
+      <!-- Afterburner design -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">Afterburner diffuser design</h2>
+        <p>Over the summer, I also contributed to the design of an afterburner for the current jet platform. My specific task was the diffuser — the component that slows and spreads exhaust gas before it enters the afterburner combustion zone. I researched diffuser geometry theory, ran preliminary analyses, and built a full CAD model in Autodesk Fusion 360.</p>
+        <p>The work was compiled into a formal report and passed to the next cohort of students on the team in Fall 2024, giving them a starting point for physical fabrication.</p>
+      </section>
+
+      <!-- Photos -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">Photos</h2>
+        <div class="photo-grid">
+          <div class="photo-placeholder"><span>images/machworks-1.jpg<br>e.g. encoder mount</span></div>
+          <div class="photo-placeholder"><span>images/machworks-2.jpg<br>e.g. Simulink model screenshot</span></div>
+          <div class="photo-placeholder"><span>images/machworks-3.jpg<br>e.g. diffuser CAD</span></div>
+        </div>
+        <!-- AFTER uploading:
+        <div class="photo-grid">
+          <img src="../images/machworks-1.jpg" alt="Rotary encoder mount" />
+          <img src="../images/machworks-2.jpg" alt="Simulink model" />
+          <img src="../images/machworks-3.jpg" alt="Afterburner diffuser CAD" />
+        </div>
+        -->
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="../index.html#projects" class="btn btn-ghost">← Back to all projects</a>
+      <span class="footer-mono">nmcdonald33@vt.edu</span>
+    </div>
+  </footer>
+
+</body>
+</html>
