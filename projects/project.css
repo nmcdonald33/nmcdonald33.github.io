@@ -250,3 +250,9 @@
   .pdf-viewer iframe { height: 400px; }
   .photo-grid { grid-template-columns: 1fr 1fr; }
 }
+
+.contrib-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
