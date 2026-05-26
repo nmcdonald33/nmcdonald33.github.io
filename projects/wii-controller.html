@@ -47,8 +47,8 @@
       <!-- Overview -->
       <section class="proj-section">
         <h2 class="proj-section-title">The idea</h2>
-        <p>For the final project in ME 3704 (Introduction to Mechatronics), I built a wireless game controller that lets users physically interact with a Python Pong game using motion. The project was inspired by the Wii remote — hence the name — and pushed me to integrate hardware, wireless communication, and software into one working system.</p>
-        <p>As the user tilts the controller forward and backward, the IMU reads Y-axis acceleration and streams it over a TCP connection to a Python script on the laptop, which maps the acceleration value to the player's paddle position in real time. Vibration motors in the controller fire on paddle contact for haptic feedback.</p>
+        <p>For my final project in ME 3704 (Introduction to Mechatronics), I built a wireless game controller that lets users physically interact with a Python Pong game using motion. The project was inspired by the Wii remote and pushed me to integrate hardware, wireless communication, and software into one working system.</p>
+        <p>As the user tilts the controller forward and backward, the IMU reads Y-axis acceleration and streams it over a TCP connection to a Python script on my laptop, which maps the acceleration value to the player's paddle position in real time. Vibration motors in the controller fire on paddle contact for haptic feedback.</p>
       </section>
 
       <!-- How it works -->
@@ -57,11 +57,11 @@
         <div class="contrib-grid">
           <div class="contrib-card">
             <div class="contrib-title">Motion sensing</div>
-            <p>An Inertial Measurement Unit (IMU) on the Arduino R4 continuously reads Y-axis acceleration as the controller tilts. Values are filtered and normalized before transmission.</p>
+            <p>An Inertial Measurement Unit (IMU) connected to the Arduino R4 continuously reads Y-axis acceleration as the controller tilts. Values are filtered and normalized before transmission.</p>
           </div>
           <div class="contrib-card">
             <div class="contrib-title">Wireless transmission</div>
-            <p>The Arduino sends acceleration data over a TCP (Transmission Control Protocol) connection to the laptop. TCP was chosen for its reliability — no dropped packets means no missed paddle moves.</p>
+            <p>The Arduino sends acceleration data over a TCP (Transmission Control Protocol) connection to the laptop. TCP was chosen for its reliability.</p>
           </div>
           <div class="contrib-card">
             <div class="contrib-title">Game control</div>
