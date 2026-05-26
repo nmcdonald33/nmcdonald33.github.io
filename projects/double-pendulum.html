@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Double Pendulum — Natalie McDonald</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">NM<span class="nav-logo-dot">.</span></a>
+      <nav class="nav-links">
+        <a href="../index.html#projects">← All projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="proj-page">
+
+    <div class="proj-page-hero">
+      <div class="proj-page-inner">
+        <div class="proj-page-meta">
+          <span class="badge badge-cat">Controls & Dynamics</span>
+          <span class="badge badge-cat">Research</span>
+          <span class="proj-date">Jan 2026 – Present · Virginia Tech Nonlinear Systems Lab</span>
+        </div>
+        <h1 class="proj-page-title">Planar Double Pendulum</h1>
+        <p class="proj-page-sub">Designing and constructing a physical double pendulum testbed to demonstrate a high-gain observer for disturbance estimation — where classical control theory meets one of the most chaotic systems in nonlinear dynamics.</p>
+        <div class="proj-tags" style="margin-top:1.5rem">
+          <span class="tag">Nonlinear dynamics</span>
+          <span class="tag">Control systems</span>
+          <span class="tag">High-gain observer</span>
+          <span class="tag">Disturbance estimation</span>
+          <span class="tag">Mechanical design</span>
+          <span class="tag">MATLAB</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-page-inner proj-page-body">
+
+      <!-- Context -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">The research context</h2>
+        <p>The double pendulum is a classic benchmark in nonlinear dynamics — two linked pendulums whose motion is governed by coupled nonlinear differential equations. Even small changes in initial conditions produce wildly different trajectories, making it a canonical example of deterministic chaos. That sensitivity is exactly what makes it a useful testbed for advanced observer and control algorithms.</p>
+        <p>At the Virginia Tech Nonlinear Systems Lab, I'm working as an undergraduate research assistant to design and build a physical planar double pendulum that will be used to demonstrate a <strong>high-gain observer for disturbance estimation</strong>. The goal is to show that the observer can accurately reconstruct unknown disturbances acting on the system from measurable state data alone — without directly sensing the disturbance.</p>
+      </section>
+
+      <!-- What a high-gain observer does -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">What is a high-gain observer?</h2>
+        <p>An observer is an algorithm that estimates the internal states of a dynamic system using only its inputs and outputs — it reconstructs what you can't directly measure. A high-gain observer does this aggressively: by using large observer gains, it can track fast-changing states and estimate unknown disturbances (forces, torques, or other inputs that aren't explicitly modeled) in real time.</p>
+        <p>For the double pendulum, this means the observer processes joint angle measurements and estimates things like friction, unknown loads, or other unmodeled forces acting on the system — without a sensor for each disturbance. This has direct applications in robotics, aerospace, and any system where full state knowledge is unavailable or expensive.</p>
+      </section>
+
+      <!-- My role -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">My contributions</h2>
+        <div class="contrib-grid">
+          <div class="contrib-card">
+            <div class="contrib-title">Mechanical design</div>
+            <p>Designing the physical planar double pendulum structure — link geometry, pivot joints, and mounting — to minimize friction and unwanted out-of-plane motion while keeping the dynamics clean and measurable.</p>
+          </div>
+          <div class="contrib-card">
+            <div class="contrib-title">Construction & fabrication</div>
+            <p>Fabricating the pendulum assembly, selecting appropriate materials and fasteners, and building the testbed to match the modeled system as closely as possible.</p>
+          </div>
+          <div class="contrib-card">
+            <div class="contrib-title">Instrumentation</div>
+            <p>Setting up sensors (encoders or IMUs) to capture joint angles and feed real-time state data to the observer algorithm. Sensor placement and noise characteristics directly affect observer performance.</p>
+          </div>
+          <div class="contrib-card">
+            <div class="contrib-title">Experimental validation</div>
+            <p>Running experiments to compare the observer's disturbance estimates against known applied disturbances, validating that the algorithm performs on the physical system as predicted by simulation.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Photos -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">Photos</h2>
+        <div class="photo-grid">
+          <div class="photo-placeholder"><span>images/pendulum-1.jpg<br>e.g. physical setup</span></div>
+          <div class="photo-placeholder"><span>images/pendulum-2.jpg<br>e.g. joint detail</span></div>
+          <div class="photo-placeholder"><span>images/pendulum-3.jpg<br>e.g. sensor wiring</span></div>
+        </div>
+        <!-- AFTER uploading photos:
+        <div class="photo-grid">
+          <img src="../images/pendulum-1.jpg" alt="Double pendulum testbed" />
+          <img src="../images/pendulum-2.jpg" alt="Pivot joint detail" />
+          <img src="../images/pendulum-3.jpg" alt="Sensor and instrumentation setup" />
+        </div>
+        -->
+      </section>
+
+      <!-- Why it matters -->
+      <section class="proj-section">
+        <h2 class="proj-section-title">Why this matters</h2>
+        <p>Most undergraduate engineering projects involve systems that are either linear or only mildly nonlinear. The double pendulum is neither — it's strongly nonlinear, underactuated, and chaotic. Working with it at the research level means reasoning about dynamics that textbook examples rarely cover, and building hardware that exposes you to the gap between simulation and physical reality.</p>
+        <p>For me specifically, this project connects my fabrication background (building the physical testbed) with the control systems and MATLAB/Simulink skills I've been developing — and pushes me into territory I haven't seen in coursework yet. It's one of the more technically demanding things I've taken on, and that's exactly why I wanted to do it.</p>
+      </section>
+
+      <!-- Status -->
+      <div class="callout">
+        <div class="callout-label">Status · In progress</div>
+        <p>This project is ongoing as of 2026. I'll update this page with results, data, and a full write-up as the work develops. Check back for experimental results and observer performance comparisons.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="../index.html#projects" class="btn btn-ghost">← Back to all projects</a>
+      <span class="footer-mono">nmcdonald33@vt.edu</span>
+    </div>
+  </footer>
+
+</body>
+</html>
